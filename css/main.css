@@ -1,0 +1,93 @@
+#main{
+
+  width: 85%;
+  height: 70%;
+  background: white;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+
+  font-size:30px;
+  color:black;
+  text-align: center;
+  vertical-align: middle;
+  font-weight:bold;
+  letter-spacing:4px;
+  padding-top: 50px;
+  font-family: 'Oswald', sans-serif;
+
+  position: absolute;
+  top: 0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+}
+
+#main .line{
+  text-align: center;
+  border-bottom: 0.5px solid gray;
+  width:20%;
+}
+
+
+#main .index{
+  font-size: 2vh;
+  font-weight: lighter;
+  line-height: 40px;
+  margin-top: 50px;
+}
+
+/* -------- what.html ---------- */
+
+#main .kasen{
+  background: linear-gradient(transparent 80%, #ff99ab 80%);
+}
+
+#main .button{
+  font-size: 2vh;
+  height:5vh;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: rgb(126, 126, 126);/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px rgb(89, 89, 89);
+  border-radius: 3px;
+  margin-top: 40px;
+}
+
+#main .button:hover {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+
+}
+
+/* ------step系　見出し----*/
+
+#main .step1{
+  font-size: 3vh;
+  padding: 5%;
+  width: 40px;
+  height: 40px;
+  mix-blend-mode: multiply;
+
+  border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+
+  position: absolute;
+  top: -1%;
+  left: -1%;
+}
+
+#main .one{
+  background: #e74c3c;
+}
+
+#main .step2{
+  color: white;
+  font-size: 2.5vh;
+  position: absolute;
+  top: 36%;
+  left: 24%;
+}

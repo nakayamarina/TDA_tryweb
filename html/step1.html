@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link rel="stylesheet" type="text/css" href="../css/cover.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../css/main.css" media="all">
+  <link href="https://fonts.googleapis.com/css?family=Economica:700" rel="stylesheet">
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+
+  <title>Topological Data Analysis</title>
+</head>
+
+<body>
+
+  <!-- ポリゴン状幾何学模様 -->
+  <div id="hoge">
+
+    <div id="main">
+      <div class="step1 one"><span class="step2">STEP.1</span></div>
+
+      input data<br>
+
+        <hr class="line"></hr>
+
+        <p class="index">
+          解析したいデータファイル(.xlsx, csv)を選択してください
+        </p>
+
+    </div>
+
+
+  </div>
+
+  <!-- ポリゴン状幾何学模様 -->
+  <!-- particles.jsを先に記述 -->
+  <script src="../js/particles.js"></script>
+  <script src="../js/cover.js"></script>
+
+  <!-- ロゴ出現 -->
+  <!-- mouseenterやmouseleaveでホバー的な -->
+  <!-- mouseleaveのwidthとheightを0にすることで縮小 -->
+  <script>
+  $('#title').mouseenter(function(){
+    $('.box').show().animate({
+        top: 0,
+        left: 0,
+        width: '400px',
+        height: '400px'
+    },700);
+    $('.logo').show();
+  }).mouseleave(function(){
+    $('.box').show().animate({
+        top: 0,
+        left: 0,
+        width: '0px',
+        height: '0px'
+    },700);
+    $('.logo').hide("slow");
+  });
+  </script>
+
+</body>
+
+</html>
