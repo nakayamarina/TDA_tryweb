@@ -37,23 +37,20 @@
   margin-top: 50px;
 }
 
-/* -------- what.html ---------- */
-
-#main .kasen{
-  background: linear-gradient(transparent 80%, #ff99ab 80%);
-}
-
 #main .button{
   font-size: 2vh;
   height:5vh;
   display: inline-block;
   padding: 0.5em 1em;
   text-decoration: none;
+
   background: rgb(126, 126, 126);/*ボタン色*/
   color: #FFF;
   border-bottom: solid 4px rgb(89, 89, 89);
   border-radius: 3px;
-  margin-top: 40px;
+  position: absolute;
+  top:82%;
+  right:5%;
 }
 
 #main .button:hover {/*ボタンを押したとき*/
@@ -62,6 +59,14 @@
     transform: translateY(4px);/*下に動く*/
     border-bottom: none;/*線を消す*/
 
+}
+
+
+/* -------- what.html ---------- */
+
+#main .kasen{
+  font-size: 3.2vh;
+  background: linear-gradient(transparent 80%, #ff99ab 80%);
 }
 
 /* ------step系　見出し----*/
@@ -90,4 +95,18 @@
   position: absolute;
   top: 36%;
   left: 24%;
+}
+
+/*--------step1.html---------*/
+
+#main p img{
+  margin-left: 20%;
+}
+#main .select{
+  font-size: 2vh;
+  font-weight: lighter;
+  text-align: left;
+  line-height: 3.5vh;
+
+  margin-top: -10px;
 }
