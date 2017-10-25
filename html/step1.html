@@ -25,17 +25,16 @@
         <p class="index">
           解析したいデータファイル(.xlsx, csv)を選択してください。<br>
 
-          <img src="../img/inputdata.png" align="left">
+          <img src="../img/inputdata.png" width="15%" height="35%" align="left">
 
           <p class="select">
             　1次元データの場合は1列<br>
             　2次元データの場合は左図のように整形してください。<br><br>
             　<input type="checkbox" name="indexs" value="1"> 行名あり<br>
-            　<input type="checkbox" name="columns" value="1"> 列名あり<br><br>
+            　<input type="checkbox" name="columns" value="1"> 列名あり<br>
 
-            　ファイルを選択してください
              <form action="../php/step1-check.php" method="post" enctype="multipart/form-data" align="left">
-               <input type="file" name="fname">
+              　<input type="file" name="fname">
                <input type="submit" class="button" value="UPLOAD">
              </form>
           </p>
