@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link rel="stylesheet" type="text/css" href="../css/top.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../css/main.css" media="all">
+  <link href="https://fonts.googleapis.com/css?family=Economica:700" rel="stylesheet">
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+
+  <title>STEP.2 PARAMETER SETTINGS</title>
+</head>
+
+<body>
+
+  <!-- ポリゴン状幾何学模様 -->
+  <div id="hoge">
+
+    <div id="main">
+      <div class="step two"><span class="step_title">STEP.2</span></div>
+
+      PRAMETER SETTINGS<br>
+
+        <hr class="line"></hr>
+
+        <p class="index">
+          <?php echo $result; ?><br>
+          トポロジカルデータ分析を適用する際の条件を設定してください。
+
+          <img src="../get_data/user_data.png" width="30%" height="50%" align="left">
+
+          <p class="ex">
+
+            <br>
+            <form class="ex" action="../php/step3.php" method="post" enctype="multipart/form-data" align="left">
+
+              <label>
+                条件１：<br>
+                データ点の半径を<br>
+                <input type="number" name="notch" style="width:10%" value="1" min="0" max="30">ずつ大きくする。<br><br>
+              </label>
+
+              <label>
+                条件２：<br>
+                データ点の半径を<br>
+                <input type="number" name="pngs" style="width:10%" value="10" min="0" max="15">回大きくする。
+              </label>
+
+             <input type="submit" class="button" value="APPLY TDA">
+            </form>
+          </p>
+        </p>
+    </div>
+
+  </div>
+
+  <!-- ポリゴン状幾何学模様 -->
+  <!-- particles.jsを先に記述 -->
+  <script src="../js/particles.js"></script>
+  <script src="../js/cover.js"></script>
+
+</body>
+
+</html>

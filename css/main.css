@@ -61,17 +61,12 @@
 
 }
 
-
-/* -------- what.html ---------- */
-
 #main .kasen{
   font-size: 3.2vh;
   background: linear-gradient(transparent 80%, #ff99ab 80%);
 }
 
-/* ------step系　見出し----*/
-
-#main .step1{
+#main .step{
   font-size: 3vh;
   padding: 5%;
   width: 40px;
@@ -89,7 +84,19 @@
   background: #e74c3c;
 }
 
-#main .step2{
+#main .two{
+  background: #f1c40f;
+}
+
+#main .three{
+  background: #1abc9c;
+}
+
+#main .four{
+  background: #3498db;
+}
+
+#main .step_title{
   color: white;
   font-size: 2.5vh;
   position: absolute;
@@ -97,12 +104,10 @@
   left: 24%;
 }
 
-/*--------step1.html---------*/
-
 #main p img{
   margin-left: 20%;
 }
-#main .select{
+#main .ex{
   font-size: 2vh;
   font-weight: lighter;
   text-align: left;

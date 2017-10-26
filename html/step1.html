@@ -16,7 +16,7 @@
   <div id="hoge">
 
     <div id="main">
-      <div class="step1 one"><span class="step2">STEP.1</span></div>
+      <div class="step one"><span class="step_title">STEP.1</span></div>
 
       INPUT DATA<br>
 
@@ -27,24 +27,25 @@
 
           <img src="../img/inputdata.png" width="15%" height="35%" align="left">
 
-          <p class="select">
+          <p class="ex">
             　1次元データの場合は1列<br>
             　2次元データの場合は左図のように整形してください。<br><br>
-            　<input type="checkbox" name="indexs" value="1"> 行名あり<br>
-            　<input type="checkbox" name="columns" value="1"> 列名あり<br>
 
-             <form action="../php/step1-check.php" method="post" enctype="multipart/form-data" align="left">
-              　<input type="file" name="fname">
-               <input type="submit" class="button" value="UPLOAD">
-             </form>
+            <form class="ex" action="../php/step2.php" method="post" enctype="multipart/form-data" align="left">
+
+              <!--空白ならば0,チェックがあれば1にするためにhiddenを作成（checkboxより前に記述）-->
+              <input type="hidden" name="row_names" value="0" />
+              　<input type="checkbox" name="row_names" value="1" /> 行名あり<br>
+              <input type="hidden" name="column_names" value="0" />
+              　<input type="checkbox" name="column_names" value="1" /> 列名あり<br><br>
+
+            　<input type="file" name="fname">
+             <input type="submit" class="button" value="UPLOAD">
+            </form>
           </p>
+        </p>
 
-
-
-      </p>
-
-    </div>
-
+      </div>
 
   </div>
 
