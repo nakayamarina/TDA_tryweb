@@ -42,17 +42,15 @@ if (is_uploaded_file($tempfile)) {
   $result = "csv形式かxlsx形式のファイルを選択してください。";
 }
 
-################ R program 実行 ######################
+################ python program 実行 ######################
 
-#Rscript：data_handling.r実行 -> データの前処理と可視化
+#python preprocessing.py -> データ整形,可視化
 
-#パスが追加されていないためRscriptのパスを記述する必要がある
-#$Rex = "/usr/local/bin/Rscript ../tda/data_handling.r $file_type $row_names $column_names";
-$Rex = "/bin/sh ./step2.sh $file_type $row_names $column_names";
+#パスが追加されていないためコマンドのパスを記述する必要がある
+$py_ex = "/Users/nakayamarina/.pyenv/shims/Python ../R_Python/preprocessing.py $file_type $row_names $column_names";
 
-$output = shell_exec("{$Rex} 2>&1");
-print_r($output);
-
+$output1 = shell_exec("{$py_ex} 2>&1");
+print_r($output1);
 
 #最後に書く
 require('../html/step2.html')

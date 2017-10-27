@@ -1,16 +1,21 @@
 library("openxlsx")
 library("TDA")
 
-notch = as.numeric(commandArgs(trailingOnly=TRUE)[1]) #第一引数取得　データ点の変化率
-pngs = as.numeric(commandArgs(trailingOnly=TRUE)[2]) #第二引数取得　データ点を変化させる回数（TDA適用イメージ出力枚数）
+#第一引数取得　データ点の変化率
+#0.1 = 7.5(plotで設定するデータ点の大きさ)
+notch = as.numeric(commandArgs(trailingOnly=TRUE)[1])
+notch = notch * 7.5
 
-data <- read.csv("../get_data/pre_data.csv", header = FALSE)
+#第二引数取得　データ点を変化させる回数（TDA適用イメージ出力枚数）
+pngs = as.numeric(commandArgs(trailingOnly=TRUE)[2])
+
+data <- read.csv("../get_data/pre_data.csv", header = TRUE)
 
 
 ############ 可視化 #######################################
 
 #データ点のサイズ
-circle_size <- 1 + notch
+circle_size <- notch
 #出力枚数
 count <- 1
 
@@ -27,9 +32,10 @@ if(length(data) == 1){
 
     png_name <- paste("../get_data/tda-" , count, ".png", sep="")
     png(png_name)
+
     #元データのデータ点
     plot(x, y[[1]], xlim=c(0, (nrow(data[1])+1)), ylim=c((min(data[1])-1), (max(data[1])+1)),
-         xlab = "X", ylab = "Y = input data", pch=20)
+         xlab = "X : Input Data 1st column", ylab = "Y : Input Data 2nd column", pch=20)
 
     #重ね合わせてplot
     par(new = T)
