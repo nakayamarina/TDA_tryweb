@@ -25,15 +25,15 @@
 #main .line{
   text-align: center;
   border-bottom: 0.5px solid gray;
-  width:20%;
+  width:10%;
 }
 
 
 #main .index{
   font-size: 2vh;
   font-weight: lighter;
-  line-height: 40px;
-  margin-top: 50px;
+  line-height: 35px;
+  margin-top: 30px;
 }
 
 #main .button{
@@ -53,6 +53,30 @@
 }
 
 #main .button:hover {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+
+}
+
+#main .back{
+  font-size: 2vh;
+  height:5vh;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+
+  background: rgb(126, 126, 126);/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px rgb(89, 89, 89);
+  border-radius: 3px;
+  position: absolute;
+  top:82%;
+  left:5%;
+}
+
+#main .back:hover {/*ボタンを押したとき*/
     -ms-transform: translateY(4px);
     -webkit-transform: translateY(4px);
     transform: translateY(4px);/*下に動く*/
@@ -115,8 +139,10 @@
   font-weight: lighter;
   text-align: left;
   line-height: 3.5vh;
+}
 
-  margin-top: -10px;
+.result{
+  margin-top: -2%;
 }
 
 #main .tda{

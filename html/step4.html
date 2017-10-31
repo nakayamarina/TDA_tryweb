@@ -23,17 +23,23 @@
         <hr class="line"></hr>
 
         <p class="index">
-          トポロジカルデータ分析の結果のグラフ（バーコード）です。<br>
-          <img src="../result/barcode.png" width="30%" height="50%" align="left">
+          トポロジカルデータ分析の結果のグラフ（バーコード）です<br>
 
-          <p class="ex">
-            <br>
-            横軸：データ点の半径<br>
+          <img class="result" src="../result/barcode.png" height="28%" width="28%" align="left">
+
+          <form class="ex " action="../php/retry.php" method="post" enctype="multipart/form-data" target="_blank" align="left">
+
+
+            穴発生時の直径と消滅時の直径を結んだもの<br><br>
+
+            横軸：データ点の直径<br>
             縦軸：穴の数<br><br>
 
-            赤線：１次の穴（一般的な穴）<br>
-            黒線：０次の穴（連結成分）<br>
-          </p>
+            赤線：１次の穴<br>
+            黒線：０次の穴<br>
+
+            <input type="submit" class="button" value="　RETRY　">
+          </form>
 
         </p>
     </div>
