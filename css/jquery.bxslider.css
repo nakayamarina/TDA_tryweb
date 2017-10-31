@@ -180,7 +180,7 @@ ul.bxslider {
 ul.bxslider li {
   /*指定したい幅と高さ*/
   width: 100px;
-  height: 280px;;
+  height: 280px;
   position: relative;
 }
 ul.bxslider li img {

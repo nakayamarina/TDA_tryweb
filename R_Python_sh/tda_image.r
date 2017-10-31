@@ -1,4 +1,3 @@
-library("openxlsx")
 library("TDA")
 
 #第一引数取得　データ点の変化率

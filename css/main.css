@@ -105,6 +105,11 @@
 #main p img{
   margin-left: 20%;
 }
+
+#main .hole_pic{
+  margin-top: 1%;
+}
+
 #main .ex{
   font-size: 2vh;
   font-weight: lighter;
