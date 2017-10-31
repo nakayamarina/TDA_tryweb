@@ -30,7 +30,14 @@ if(length(data) == 1){
   #TDA適用イメージを出力
   while(count <= pngs){
 
-    png_name <- paste("../get_data/tda-" , count, ".png", sep="")
+    #出力画像の名前
+    #順番にするため../get_data/tda-の後の数字は２桁表記にする(例：01,02,...,10)
+    if(count < 10){
+      png_name <- paste("../get_data/tda-0" , count, ".png", sep="")
+    } else {
+      png_name <- paste("../get_data/tda-" , count, ".png", sep="")
+    }
+
     png(png_name)
 
     #元データのデータ点
@@ -57,7 +64,14 @@ if(length(data) == 1){
     #TDA適用イメージを出力
     while(count <= pngs){
 
-      png_name <- paste("../get_data/tda-" , count, ".png", sep="")
+      #出力画像の名前
+      #順番にするため../get_data/tda-の後の数字は２桁表記にする(例：01,02,...,10)
+      if(count < 10){
+        png_name <- paste("../get_data/tda-0" , count, ".png", sep="")
+      } else {
+        png_name <- paste("../get_data/tda-" , count, ".png", sep="")
+      }
+
       png(png_name)
       #元データのデータ点
       plot(data, xlim=c((min(data[1])-2), (max(data[1])+2)), ylim=c((min(data[2])-2), (max(data[2])+2)),
@@ -85,6 +99,6 @@ if(length(data) == 1){
 data <- as.matrix(data)
 tda <- ripsDiag(X = data, maxdimension = 1, maxscale = 3)
 
-png("../get_data/barcode.png")
+png("../result/barcode.png")
 plot(tda[["diagram"]], barcode = TRUE)
 dev.off()

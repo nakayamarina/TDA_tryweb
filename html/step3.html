@@ -13,7 +13,17 @@
     <script type="text/javascript">
             $(document).ready(function(){
                 $('.bxslider').bxSlider({
-                    auto: true,
+                    //自動スライド
+                    auto: false,
+
+                    //幅設定
+                    slideWidth: 440,
+
+                    //スライドスピード
+                    speed: 400,
+
+                    //キャプション（つける場合はtrue, imgタグの中にtitleを記述）
+                    captions: true,
                 });
         	});
     </script>
@@ -35,21 +45,19 @@
 
         <p class="index">
 
-          <a href="../html/step4.html" class="button" target="_blank">RESULT</a>
+          <form class="ex" action="../php/step4.php" method="post" enctype="multipart/form-data" align="left">
 
+            <input type="submit" class="button" value="　RESULT　">
+         </form>
+
+          <!-- スライドショー -->
+          <center>
           <dvi class="tda">
-          <ul class="bxslider">
-		          <li><img src="../get_data/tda-1.png"></li>
-		          <li><img src="../get_data/tda-2.png"></li>
-		          <li><img src="../get_data/tda-3.png"></li>
-              <li><img src="../get_data/tda-4.png"></li>
-		          <li><img src="../get_data/tda-5.png"></li>
-              <li><img src="../get_data/tda-6.png"></li>
-              <li><img src="../get_data/tda-7.png"></li>
-              <li><img src="../get_data/tda-8.png"></li>
-	        </ul>
-        </dvi>
-
+            <ul class="bxslider">
+                <?php echo $output ?>
+  	        </ul>
+          </dvi>
+        </center>
         </p>
     </div>
 

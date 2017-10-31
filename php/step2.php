@@ -47,10 +47,10 @@ if (is_uploaded_file($tempfile)) {
 #python preprocessing.py -> データ整形,可視化
 
 #パスが追加されていないためコマンドのパスを記述する必要がある
-$py_ex = "/Users/nakayamarina/.pyenv/shims/Python ../R_Python/preprocessing.py $file_type $row_names $column_names";
+$py_ex = "/Users/nakayamarina/.pyenv/shims/Python ../R_Python_sh/preprocessing.py $file_type $row_names $column_names";
 
 $output1 = shell_exec("{$py_ex} 2>&1");
-print_r($output1);
+//print_r($output1);
 
 #最後に書く
 require('../html/step2.html')
