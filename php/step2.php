@@ -46,11 +46,42 @@ if (is_uploaded_file($tempfile)) {
 
 #python preprocessing.py -> データ整形,可視化
 
+#csv or xlsxファイルか判別する
+#Python側でするり早くなるのか
+
+if($file_type == 0){
+
+  #csvファイルの場合
+
+  #パスが追加されていないためコマンドのパスを記述する必要がある
+  $py_ex = "/Users/nakayamarina/.pyenv/shims/Python ../R_Python_sh/preprocessing_csv.py $row_names $column_names";
+
+  $output1 = shell_exec("{$py_ex} 2>&1");
+  //print_r($output1);
+
+} else if ($file_type == 1){
+
+  #xlsxファイルの場合
+
+  #パスが追加されていないためコマンドのパスを記述する必要がある
+  $py_ex = "/Users/nakayamarina/.pyenv/shims/Python ../R_Python_sh/preprocessing_xlsx.py $row_names $column_names";
+
+  $output1 = shell_exec("{$py_ex} 2>&1");
+  //print_r($output1);
+
+}
+
+/*
+
+#python側でcsv or xlsxファイルか判別する
+#とにかく遅い
+
 #パスが追加されていないためコマンドのパスを記述する必要がある
 $py_ex = "/Users/nakayamarina/.pyenv/shims/Python ../R_Python_sh/preprocessing.py $file_type $row_names $column_names";
 
 $output1 = shell_exec("{$py_ex} 2>&1");
 //print_r($output1);
+*/
 
 #最後に書く
 require('../html/step2.html')
