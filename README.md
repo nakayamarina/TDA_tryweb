@@ -46,15 +46,96 @@
 
 ### トップページ
 #### Topological Data Analysis
+* /html/top.html
+
+背景は[particles.js](https://liginc.co.jp/191958)に手を加えたものを使用．
+* /css/top.css
+* /js/jquery.min.js
+* /js/particles.js
+* /js/cover.js  
+
+上記のコードはすべてのページで使用しているため，以下は記述を省略．
 
 ### 説明
-#### WHAT
+#### WHAT1
+TDAの説明
+* /html/what_tda.html
+* /css/main.css
+
+### WHAT2
+Persistent Homologyの説明
+* /html/what_ph.html
+* /css/main.css
+* /img/ (説明用画像)
 
 ### 体験
 #### STEP.1
+ユーザの選択したデータファイルを読み込み
+* /html/step1.html
+* /css/main.css
+* /php/step2.php
+  - 行名の有無 --> なし:0, あり:1
+  - 列名の有無 --> なし:0, あり:1
+  - ユーザの選択したデータファイルの拡張子を調べる  
+  --> csv : /R_Python_sh/preprocessing_csv.pyを行列名の有無を引数で渡して実行  
+  --> xlsx : /R_Python_sh/preprocessing_xlsx.pyを行列名の有無を引数で渡して実行
+
+ユーザの選択したデータファイルの前処理（欠損値除去，行列名の削除），前処理済みのデータを/get_data/pre_data.csvとして書き出し，グラフを/get_data/user_data.pngとして書き出し．
+* /R_Python_sh/preprocessing_csv.py
+* /R_Python_sh/preprocessing_xlsx.py
 
 #### STEP.2
+トポロジカルデータを適用する際のパラメータを設定．  
+TDA適用にはRのパッケージTDAを使用する．
+
+* /html/step2.html --> step2.phpで書き出した/get_data/user_data.png表示
+* /css/main.css
+* /php/step3.php
+  - TDA適用イメージ可視化のためデータ点をどれぐらいずつ大きくしていくか設定 --> notch
+  - TDA適用イメージ可視化のためデータ点を何回大きくするか設定(画像出力枚数) --> pngs
+  - notchとpngsを引数で渡して/R_Python_sh/tda_image.rを実行
+
+/get_data/pre_data.csvと，notch・pngsをもとにTDA適用イメージを/get_data/にpngs分書き出し，TDAを適用，バーコードを/result/barcode.pngとして書き出し．
+* /R_Python_sh/tda_image.r
 
 #### STEP.3
+TDA適用イメージを表示
+* /html/step3.html --> step2.phpで/get_data/に書き出したTDA適用イメージをpngs分表示
+* /css/main.css
+* /php/return_step2.php
+  - /R_Python_sh/remove_tda.shを実行
+  - /html/step2.htmlに戻る
+* /php/step4.php
+  - /R_Python_sh/remove_get_data.shを実行
+
+パラメータの再設定をするため，先に設定したnotchとpngsを元に/get_data/に出力した画像を削除
+* /R_Python_sh/remove_tda.sh
+
+次の使用者？のために/get_data/内の画像を削除
+* /R_Python_sh/remove_get_data.sh
+
+画像表示用に[ここ](http://on-ze.com/archives/1658)を参考に使用
+* /js/jquery.bxslider.js
+* /css/jquery.bxslider.css
 
 #### STEP.4
+新規タブでTDA適用結果，つまりバーコードを表示
+* /html/step4.html --> step2.phpで書き出した/result/barcode.pngを表示
+* /css/main.css
+* /php/retry.php
+  - /R_Python_sh/remove_result.shを実行
+  - /html/step1.htmlに戻る
+
+次の使用者？のために/result/barcode.pngを削除
+* /R_Python_sh/remove_result.sh
+
+## その他ファイル
+#### /sample_data/
+STEP.1で選択する用のサンプルデータ
+* 1dimention：1次元データ
+* 2dimention：2次元データ
+
+行列の有無，欠損値の有無，ファイルの種類，データの違いなど，様々なパターンを想定して作成．
+
+### /etc/
+ボツになったプログラム，コンテンツ作成用のファイル置き場
