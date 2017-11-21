@@ -32,6 +32,10 @@
 
 ## DEMO
 
+<div align="center">
+<img src="https://github.com/nakayamarina/TDA_tryweb/blob/readme_cntnt/readme/demo.gif" alt="holes" title="holes" width="700" height="500">
+</div>
+
 ## 構成
 
 <div align="center">
