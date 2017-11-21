@@ -68,7 +68,7 @@ Persistent Homologyの説明
 * /css/main.css
 * /img/ (説明用画像)
 
-### 体験
+### TDA体験
 #### STEP.1
 ユーザの選択したデータファイルを読み込み
 * /html/step1.html
