@@ -17,10 +17,10 @@
 これらの穴に着目してデータ分布の形状を捉えるのが，TDAのPersistent Homologyである．Persistent Homologyはデータ点の直径の変化に伴う穴の発生と消滅情報をみることでデータ全体の形を捉えるものである．  
 データというのは特徴空間において点の集合であるため，どのようなものを穴と捉えるかという問題がある．そこでPersistent Homologyでは，データの点をボール状に膨らませることで，連結した図形の穴に着目する．穴の形状により穴の発生と消滅のタイミングは異なるため，データ点の分布の形状の特性を捉えることが可能となる．そして，データ点の直径の変化に伴う穴の発生と消滅の情報を可視化する技術にバーコードがある（下図）．  
 <div align="center">
-<img src="https://github.com/nakayamarina/TDA_tryweb/blob/readme_cntnt/readme/hole.png" alt="ph" title="ph" width="400" height="100" align = "center">  
+<img src="https://github.com/nakayamarina/TDA_tryweb/blob/readme_cntnt/etc/readme/hole.png" alt="ph" title="ph" width="400" height="100" align = "center">  
 
 
-<img src="https://github.com/nakayamarina/TDA_tryweb/blob/readme_cntnt/readme/pd.png" alt="ph" title="ph" width="300" height="180" align = "center">
+<img src="https://github.com/nakayamarina/TDA_tryweb/blob/readme_cntnt/etc/readme/pd.png" alt="ph" title="ph" width="300" height="180" align = "center">
 </div>
 
 ## 動作環境
@@ -33,13 +33,13 @@
 ## DEMO
 
 <div align="center">
-<img src="https://github.com/nakayamarina/TDA_tryweb/blob/readme_cntnt/readme/demo.gif" alt="holes" title="holes" width="500" height="300">
+<img src="https://github.com/nakayamarina/TDA_tryweb/blob/readme_cntnt/etc/readme/demo.gif" alt="holes" title="holes" width="500" height="300">
 </div>
 
 ## 構成
 
 <div align="center">
-<img src="https://github.com/nakayamarina/TDA_tryweb/blob/readme_cntnt/readme/tda_tryweb.png" alt="holes" title="holes" width="500" height="300">
+<img src="https://github.com/nakayamarina/TDA_tryweb/blob/readme_cntnt/etc/readme/tda_tryweb.png" alt="holes" title="holes" width="500" height="300">
 </div>
 
 ### 構成図
