@@ -54,7 +54,7 @@ if($file_type == 0){
   #csvファイルの場合
 
   #パスが追加されていないためコマンドのパスを記述する必要がある
-  $py_ex = "/Users/nakayamarina/.pyenv/shims/Python ../R_Python_sh/preprocessing_csv.py $row_names $column_names";
+  $py_ex = "/Users/nakayamarina/.pyenv/shims/Python -E ../R_Python_sh/preprocessing_csv.py $row_names $column_names";
 
   $output1 = shell_exec("{$py_ex} 2>&1");
   //print_r($output1);
@@ -64,7 +64,7 @@ if($file_type == 0){
   #xlsxファイルの場合
 
   #パスが追加されていないためコマンドのパスを記述する必要がある
-  $py_ex = "/Users/nakayamarina/.pyenv/shims/Python ../R_Python_sh/preprocessing_xlsx.py $row_names $column_names";
+  $py_ex = "/Users/nakayamarina/.pyenv/shims/Python -E ../R_Python_sh/preprocessing_xlsx.py $row_names $column_names";
 
   $output1 = shell_exec("{$py_ex} 2>&1");
   //print_r($output1);
